@@ -14,7 +14,7 @@ class MainApp extends StateWidget{
 Widget build(BuildContext context){
     return MaterialApp(
         title: 'Decider',
-        theme: ThemDatea(primarySwatch: Colours.red),
+        theme: ThemData(primarySwatch: Colours.red),
         home: const HomeView()
     )
 }

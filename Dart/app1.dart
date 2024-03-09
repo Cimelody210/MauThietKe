@@ -3,7 +3,12 @@ import 'package:flutter/views.material.dart';
 import 'package:flutter/views.service.dart';
 import 'package:provider/views.provider.dart';
 
+import 'src:views/home_pages.dart';
+
 void main(){
+
+    // runApp(const GitSnap());
+    
     runApp(
         MultiProvider(
             provider:[
@@ -19,18 +24,44 @@ void main(){
 
 class BudgetPageHeader extends ConsumeWidget{
     Widget build(BuildContext context, WidgetRef ref){
+        title: 'App Data demo',
+        theme: ThemData(
+            colorScheme: ColorScheme.fromSeed(
+                seedColor: AppColors.pinkColor,
+            ),
+            userMaterial3: true,
+        ),
+        home: const App(),
         children:{
             Text(
                 AppHelpers.formatCurrency(totalSpent, ref),
-                style: style.titleMedium?.copyWith(
-                    color:colours.background,
-                ),
+                style: GoogleFonts.roboto(
+                    fontSize: 16.sp, fontWeight: fontWeight,
+                )
             ),
+            SizeBox(height: 20.h,),
+            Container(
+                height: 17.h,
+                width: 400.w,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6.sp),
+                    color: Colors.blue.withOpacity(0.3),
+                )
+            )
             Text(
                 style: style.titleMedium?.copyWith(
-                    color:colours.background,
+                    // color:colours.background,
                     fontWeight: FontWeight.bold,
                 ),
+            ),
+            Switch(
+                value: notificationOn,
+                activeColor: Colors.black,
+                onChanged:(a){
+                    setState((){
+                        notificationOn =a;
+                    });
+                },
             ),
         },
     },
