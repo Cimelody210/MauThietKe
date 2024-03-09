@@ -23,6 +23,9 @@ void main(){
 }
 
 class BudgetPageHeader extends ConsumeWidget{
+
+    // const BudgetPageHeader({Key? key}): super(key: key);
+    
     Widget build(BuildContext context, WidgetRef ref){
         title: 'App Data demo',
         theme: ThemData(
