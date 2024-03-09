@@ -7,6 +7,7 @@ public static class Point
     public static void Run()
     {
         // examine
+        // Add
     }
     public double X(get;)
     public double Y(get;)
@@ -14,6 +15,7 @@ public static class Point
     public static Point NewCartesPoint(double x, double y)
     {
         return new Point(x,y);
+
     }
     public static Point NewPolarPoint(double alpha, double theta)
     {
