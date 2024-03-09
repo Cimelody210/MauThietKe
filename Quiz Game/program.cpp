@@ -19,5 +19,7 @@ class Quiz{
     int score;
     Quiz(): score(0){}
 
-    void addQuestion(const std:: string& text, const std::vector)
+    void addQuestion(const std:: string& text, const std::vector<string>& opts, int correct){
+        questions.emplace_back(text,opts, correct);
+    }
 }
