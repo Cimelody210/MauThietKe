@@ -49,10 +49,12 @@ class BudgetPageHeader extends ConsumeWidget{
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(6.sp),
                     color: Colors.blue.withOpacity(0.3),
-                )
+                ),
+                transactions: transactions,
             )
             Text(
                 style: style.titleMedium?.copyWith(
+                    
                     // color:colours.background,
                     fontWeight: FontWeight.bold,
                 ),
