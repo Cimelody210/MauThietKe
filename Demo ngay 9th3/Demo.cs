@@ -16,6 +16,7 @@ public class HelloWorld
     sb.Append("<p>");
     sb.Append(hello);
     sb.Append("</p>");
+    //
     Console.WriteLine (sb.ToString());
     sb.Append("<ul>")
     var word =  new[] ("hello", "World");
@@ -26,8 +27,4 @@ public class HelloWorld
     Console.WriteLine (sb.ToString());
     
         
-    }
-}
-    
-    
 }
