@@ -23,3 +23,31 @@ class Quiz{
         questions.emplace_back(text,opts, correct);
     }
 }
+void display(int index) const{
+    const Quesiton& q = questions[index];
+    cout << "Question" << index+1<<":"; << q.questions <<"\n";
+    for (size_t i=0, i<q.options.size();, ++i){
+        cout << " " << i+1<<":"; << q.options[i] <<"\n";
+    }
+}
+void Start(){
+    score  =0;
+    for( size_t i=0, i < questions.size(); ++i){
+        display(i);
+        int userChoice = getUserChoice();
+        if (userChoice== questions[i].correctOption){
+            cout << "Exactly\n";
+            score++;
+        }
+        else{
+            cout << "Incorrect! Correct option is: " << questions[i].correctOption << "\n";
+        }
+    }
+    cout << "Quiz completed! Your score is" << score << "/" << questions.size() << "\n";
+    
+}
+int getUserChoice(){
+    int choice;
+    cout << "" << score << "/" << questions.size() << "\n";
+    
+}
