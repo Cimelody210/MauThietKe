@@ -36,3 +36,10 @@ class HangSanXuat{
     public int getTenHangSX(){ return tenhangSX;}
     public int getNamSX(){ return tenhangSX;}
 }
+
+public class QuanLyPhim{
+    public static void Main(String[] args)
+    {
+        // Here is main code
+    }
+}
