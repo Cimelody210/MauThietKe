@@ -1,0 +1,9 @@
+/* Co dãn bảng theo màn hình */
+table{
+    width: 100%;
+    table-layout: auto;
+}
+/* Bóng cho đối tượng */
+image{
+    filter: drop-shadow(10px, 8px, 10px red);
+}
