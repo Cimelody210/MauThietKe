@@ -35,13 +35,12 @@ public static class CarBuilder
 }
 public class ToImpl: ISpecificCarType, ISpecificWheelType, IBuilderCar
 {
-    private Car _car =  new Car();
-    
+    private Car _car =  new Car();    
     public ISpecificCarType ofType(CarType type){
         _car.Type = type;
         return this;
     }
-    public IBuilderCar WithWheels(int size)
+    public IBuilderCar WheelSize(int size)
     {
         switch(_car.Type){
             case CarType.Sedan when size !=16:

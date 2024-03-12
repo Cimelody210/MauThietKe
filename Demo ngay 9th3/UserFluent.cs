@@ -29,6 +29,11 @@ public static class UserFuent
         public string Name {get; set;}
         public string List<HtmlElement> Elements {get; } =  new();
         public string Text {get; set;}
+        
+        public HtmlBuilder Text(string text){
+            _element.Text =  text;
+            return this;
+        }
         public HtmlBuilder AddChild(string name, string text = null){
             _element.Elements.Add(new HtmlBuilder(name, text));
             return this;
@@ -42,10 +47,12 @@ public static class UserFuent
         public static HtmlBuilder Create(string rootName){
             return new HtmlBuilder(rootName);
         }
+        public class HtmlBuilder Build()
+        {
+            return _element;
+            // private readonly HtmlElement _element;
+        }
     }
-    public class HtmlBuilder
-    {
-        private readonly HtmlElement _element;
-    }
+   
     
 }
