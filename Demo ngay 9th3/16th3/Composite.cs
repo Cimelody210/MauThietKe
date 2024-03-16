@@ -26,7 +26,7 @@ namespace Composite
 		  private void Print(StringBuilder sb, int depth)
 		  {
 		    sb.Append(new string('*',depth))
-		      .Append(string.IsNullOrWhiteSpace(Color) ? '': "")
+		      .Append(string.IsNullOrWhiteSpace(Color) ? " ": ${Color})
 		      .AppendLine(Name);
 		    foreach(var child in Children)
 		    {

@@ -12,7 +12,8 @@ namespace Tree
 		public static void Main(string[] args)
 		{
 			Console.WriteLine("Hello, World!");
-			var list = 1;
+			// Đốn dữ liệu lên 1tr dòng và pay màu
+			
 		}
 
 		public class TreeType()
@@ -36,9 +37,27 @@ namespace Tree
 		private readonly ITestOutputHelper _output;
 		[Fact]
 		[DotMemoryUnit(FailIthoughtSupport= true)]
+		
 		public void TestForest1()
 		{
-		  var forest =1;
+		  var forest = Enumerable.Range(0, 1000)
+			  .Select(x, index) =>
+			  {
+			    var isApple = index % 3 ==0;
+			    var treeType = TreeTypeFactory.Get(
+			        isApple ? "Apple ": "Orange",
+			        isApple ? "red ": "cyan",
+			        isApple ? new string('a', 1000) : new string('b', 1000) );
+			    
+			    return new SmallType()
+			    {
+			      TreeType =  treeType,
+			      X =  Random.Shared.Next(1,100),
+			      Y =  Random.Shared.Next(1,100)
+			    };
+			  }.ToList();
+		  
+		  Assert.True(forest.Count >0);
 		}
 	}
 }
