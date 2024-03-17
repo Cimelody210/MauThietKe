@@ -3,12 +3,19 @@ import 'package:flutter/views.material.dart';
 import 'package:flutter/views.service.dart';
 import 'package:provider/views.provider.dart';
 
+import 'package:testrd/firebase_option.dart';
+
 import 'src:views/home_pages.dart';
 
-void main(){
+void main() async{
 
     // runApp(const GitSnap());
-    
+    // Dính vô Firebase
+    WidgetFlutterBinding.ensureIntitialized();
+    await Firebase.intitializeApp(
+        option = DefautFirebaseOption.currentPlatform
+    );
+
     runApp(
         MultiProvider(
             provider:[
