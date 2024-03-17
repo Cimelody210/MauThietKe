@@ -29,6 +29,13 @@ void main() async{
     )
 }
 
+static const FirebaseOption ios = FirebaseOption {
+    apiKey: 'AIzaSyC-UQrx582MIQFWGNWOGNN9tfAr0nkDnd6nTU',
+    appId: '1:852788491165:android:028cbd7bbabeadc36ab574',
+    projectId: 'facebook-clone-d35c7',
+    storageBucket: 'facebook-clone-d35c7.appspot.com',
+};
+
 class BudgetPageHeader extends ConsumeWidget{
 
     // const BudgetPageHeader({Key? key}): super(key: key);
