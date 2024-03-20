@@ -2,6 +2,24 @@ import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
   
+  @Override
+  public Object getItem(int position) { return null ;}
+  
+  @Override
+  public long getItemId(int position) {return 0;}
+  
+  @Override
+  public View getView(int position, View concentview, ViewGroup parent)
+  {
+    LayoutInflater inflater = (LayoutInflater) context.getSystemService();
+    concentview = inflater.inflate(layout, null);
+    
+    TextView txtTen = (TextView) concentview.findViewById(R.id.textViewTen);
+    TextView txtHoTen = (TextView) concentview.findViewById(R.id.textViewHoTen);
+    TextView imgHinh = (TextView) concentview.findViewById(R.id.image);
+    
+  }
+
   public class TraiCay{
     private String tenTraiCay;
     private String moTa;
