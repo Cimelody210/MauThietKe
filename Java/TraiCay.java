@@ -2,6 +2,26 @@ import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
   
+  ListView listViewTraiCay;
+  ArrayList<TraiCay> arrayTraiCay;
+  TraiCayAdapter adapter;
+  
+  @Override
+  protected void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    EdgeToEdge.enable(this);
+    setContentView(R.layout.activity.main);
+    anhXa();
+    adapter = new TraiCayAdapter(this, R.layout.dongtraicay, arrayTraiCay);
+    listViewTraiCay.setAdapter(adapter);
+    ViewCompat.setOnApplyWindowInsetsListener(findviewById(R.id.main), (v, Insets)) => {
+      Insets systemBars = Insets.getInsets(WindowInsetsCompat.Type.systemBars());
+      v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+      
+      return insets;
+    };
+  }
   @Override
   public Object getItem(int position) { return null ;}
   
@@ -45,22 +65,6 @@ public class MainActivity extends AppCompatActivity {
   ArrayList<TraiCay> arrayTraiCay;
   TraiCayAdapter adapter;
   
-  @Override
-  protected void onCreate(Bundle savedInstanceState)
-  {
-    super.onCreate(savedInstanceState);
-    EdgeToEdge.enable(this);
-    setContentView(R.layout.activity.main);
-    anhXa();
-    adapter = new TraiCayAdapter(this, R.layout.dongtraicay);
-    listViewTraiCay.setAdapter(adapter);
-    ViewCompat.setOnApplyWindowInsetsListener(findviewById(R.id.main))({
-      Insets systemBars = Insets.getInsets(WindowInsetsCompat);
-      v.setPadding(systemBars.left, systemBars.top, systemBars.bottom);
-      
-      return insets;
-    });
-  }
   public void anhXa(){
     listViewTraiCay.findviewById(R.Id.listViewTraiCay);
     arrayTraiCay = new ArrayList<>();
