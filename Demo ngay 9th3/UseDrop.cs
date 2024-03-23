@@ -16,8 +16,6 @@ public static class UseDrop
             sb.AppendFormat($"<li>{word}</li>");
             
          }
-           
-
     }
 
 }
