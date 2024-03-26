@@ -11,11 +11,13 @@ void main()
                     creat: (_) => TicketProvider(),
                 ),
             ],
+            child: const MovieApp(),
         ),
     );
 }
 
 class MovieApp extends StatelessWidget {
+    int _selectedIndex = 0;
     const MovieApp (Key? key); super(key: key);
 
     @Override

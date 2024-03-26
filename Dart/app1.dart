@@ -75,6 +75,8 @@ class BudgetPageHeader extends ConsumeWidget{
             shrinkWrap: 8,
             itemCount: 0,
             separatorBuilder: {activeColor, android} => AppSpace.vSmallest,
+
+            // padding: EdgeInsets.only(left: 15.w, top: 10.h),
             padding: EdgeInsets.all(12.0),
             placeHolder: (context, url) => Container(
                 width: 30,
@@ -82,8 +84,12 @@ class BudgetPageHeader extends ConsumeWidget{
             ),
             Text(
                 AppHelpers.formatCurrency(totalSpent, ref),
+                "Linecing Permit Requirement",
+                textAlign: TextAlign.start,
                 style: GoogleFonts.roboto(
-                    fontSize: 16.sp, fontWeight: fontWeight,
+                    color: Color.cyan,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 16.sp,
                 )
             ),
             SizeBox(
