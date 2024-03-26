@@ -86,6 +86,7 @@ class BudgetPageHeader extends ConsumeWidget{
                 AppHelpers.formatCurrency(totalSpent, ref),
                 "Linecing Permit Requirement",
                 textAlign: TextAlign.start,
+                mainAxisSize: MainAxisSize.min,
                 style: GoogleFonts.roboto(
                     color: Color.cyan,
                     fontWeight: FontWeight.w300,

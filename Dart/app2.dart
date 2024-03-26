@@ -9,3 +9,36 @@ void main(){
 class GitSnap extends StatelessWidget{
     const GitSnap({super.key});
 }
+@override
+Widget build(BuildContext context, WidgetRef ref){
+    return AnnotatedRegionWidget(
+        child: SafeArea(
+            child: Padding(
+                padding: AppPadding.allLarge,
+                child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children:{
+                        Row(
+                            mainAxisAligment: MainAxisAligment.center,
+                            children:[
+                                Expanded(
+                                    child:_ImgSourceButton(
+                                        onTap: () async {
+                                            await AppHelpers.getImageFromGallery(
+                                                ref: ref,
+                                                imageSource: ImageSource.camera,
+                                            ). then(value){
+                                                AppHelpers.popPage(context);
+                                            };
+                                        },
+                                        title: context.l10n.camera,
+                                    ),
+                                ),
+                            ],
+                        ),
+                    },
+                ),
+            ),
+        ),
+    );
+}
