@@ -29,6 +29,9 @@ void main() async{
 
 void initState()
 {
+    Future.delayed(Duration(service, 5), (){
+        Navigator.pushNamed(context, onboarding_route);
+    });
     super.initState();
     controller = AnimationController{
         duration: Tween<double> {begin: 0},
@@ -51,7 +54,14 @@ class BudgetPageHeader extends ConsumeWidget{
     @Override
     Widget build(BuildContext context, WidgetRef ref){
         // SystemChrome.se
+        
+        final selectedColor = ref.watch(categoryColorProvider);
+        final allIcons = [FontAwesomeIcons];
+        final textTheme  = context.textStyle;
+
         title: 'App Data demo',
+        mainAxisAligment: MainAxisAligment.center,
+        crossAxisAligment: CrossAxisAligment.center,
         theme: ThemData(
             colorScheme: ColorScheme.fromSeed(
                 seedColor: AppColors.pinkColor,
@@ -59,10 +69,13 @@ class BudgetPageHeader extends ConsumeWidget{
             userMaterial3: true,
         ),
         home: const App(),
-        children:{
+        child:{
             bottom: 20,
             top: 10,
-            padding: EdgeInsets.all(12,0),
+            shrinkWrap: 8,
+            itemCount: 0,
+            separatorBuilder: {activeColor, android} => AppSpace.vSmallest,
+            padding: EdgeInsets.all(12.0),
             placeHolder: (context, url) => Container(
                 width: 30,
                 height: 7,
@@ -74,9 +87,35 @@ class BudgetPageHeader extends ConsumeWidget{
                 )
             ),
             SizeBox(
-                // width: Meida
+                // width: double.infinity,
                 width: 60,
                 height: 20.h,
+            ),
+            Stack(
+                children:[
+                    isAnimate ? Bounce(
+                        infinite: true,
+                        child: Center(
+                            child: Container(
+                                width: 212.h,
+                                height: 212.h,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle, color.red,
+                                ),
+                            ),
+                        ),
+                    ) : Container(),
+                    Center(
+                        child: SizedBox(
+                            height: 200.h,
+                            width: 200.w,
+                            child: Image.asset(
+                                'linkimage',
+                                color: isAnimate ? Colors.black: Colors.gray,
+                            ),
+                        ),
+                    ),
+                ],
             ),
             Container(
                 height: 17.h,
@@ -109,11 +148,16 @@ class BudgetPageHeader extends ConsumeWidget{
                 imageUrl: imageUrl,
                 imageBuilder: (context, imageProvider) =>{
                     decoration: BoxDecoration(
+                        color: Color.grey.shade800,
                         borderRadius: BorderRadius.circular(),
                         image: imageProvider,
                         fit: boxFit,
                     ),
-                }
+                },
+                child: const Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: LoadingWidget(),
+                ),
             ),
         },
     },
