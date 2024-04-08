@@ -16,6 +16,10 @@ interface IAnimal
     public class Action() { }
     public class Speak() { }
 }
+interface ISimpleFactory
+{
+    public class CreateAnimal(string animalType): IAnimal { }
+}
 
 class Tiger: IAnimal
 {
