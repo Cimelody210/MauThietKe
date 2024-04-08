@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System;
 using System.IO;
+// 2/ Create the implementation for the following class diagram.
 
 public class Program
 {
