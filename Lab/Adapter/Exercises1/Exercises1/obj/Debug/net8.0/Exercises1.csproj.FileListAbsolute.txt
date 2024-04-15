@@ -1,0 +1,14 @@
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\bin\Debug\net8.0\Exercises1.exe
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\bin\Debug\net8.0\Exercises1.deps.json
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\bin\Debug\net8.0\Exercises1.runtimeconfig.json
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\bin\Debug\net8.0\Exercises1.dll
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\bin\Debug\net8.0\Exercises1.pdb
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\obj\Debug\net8.0\Exercises1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\obj\Debug\net8.0\Exercises1.AssemblyInfoInputs.cache
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\obj\Debug\net8.0\Exercises1.AssemblyInfo.cs
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\obj\Debug\net8.0\Exercises1.csproj.CoreCompileInputs.cache
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\obj\Debug\net8.0\Exercises1.dll
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\obj\Debug\net8.0\refint\Exercises1.dll
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\obj\Debug\net8.0\Exercises1.pdb
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\obj\Debug\net8.0\Exercises1.genruntimeconfig.cache
+C:\Users\PC602\Downloads\Adapter\Exercises1\Exercises1\obj\Debug\net8.0\ref\Exercises1.dll
