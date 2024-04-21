@@ -34,6 +34,19 @@ Widget build(BuildContext context){
                 focal: Alignment(-0.2, 0.6),
             ),
         ),
+        endActionPane: ActionPane(
+            motion: ScrollMotion(),
+        ),
+        floatingActionButton: FloatingActionButton(
+            onPressed:(){
+                setState((){
+                    Random random  =  Random(),
+                    width = random.nextInt(110).toDouble(),
+                    height =  random.nextInt(200).toDouble(),
+                    color = Color.fromRGB(random.nextInt(256)),
+                }),
+            },
+        ),
         title: 'Decider',
         theme: ThemData(primarySwatch: Colours.red),
         home: const HomeView()
