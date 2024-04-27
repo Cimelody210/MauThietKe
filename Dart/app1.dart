@@ -51,6 +51,10 @@ static const FirebaseOption ios = FirebaseOption {
 
 class BudgetPageHeader extends ConsumeWidget{
     // const BudgetPageHeader({Key? key}): super(key: key);
+
+    List<String> titles = []
+    List<Widget> image  =[]
+    
     @Override
     Widget build(BuildContext context, WidgetRef ref){
         // SystemChrome.se
@@ -81,6 +85,11 @@ class BudgetPageHeader extends ConsumeWidget{
             placeHolder: (context, url) => Container(
                 width: 30,
                 height: 7,
+            ),
+            Flexible(
+                flex: 20,
+                child: Image(image: data.image),
+                const: Spacer(flex:1),
             ),
             Text(
                 AppHelpers.formatCurrency(totalSpent, ref),

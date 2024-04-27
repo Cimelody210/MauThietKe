@@ -18,6 +18,13 @@ void main()
 
 class MovieApp extends StatelessWidget {
     int _selectedIndex = 0;
+    static const TextStyle optionStyle = TextStyle(fontSize : 30, fontWeight: FontWeight.bold);
+    static const List<Widget> _widgetOption = <Widget>[
+        Text(
+            'Ïndex 1: Business',
+            style: optionStyle,
+        ),
+    ]
     const MovieApp (Key? key); super(key: key);
 
     @Override
