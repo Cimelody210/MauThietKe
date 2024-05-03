@@ -49,6 +49,7 @@ static const FirebaseOption ios = FirebaseOption {
     storageBucket: 'facebook-clone-d35c7.appspot.com',
 };
 
+
 class BudgetPageHeader extends ConsumeWidget{
     // const BudgetPageHeader({Key? key}): super(key: key);
 
@@ -73,11 +74,12 @@ class BudgetPageHeader extends ConsumeWidget{
             userMaterial3: true,
         ),
         home: const App(),
-        child:{
+        children:{
             bottom: 20,
             top: 10,
             shrinkWrap: 8,
             itemCount: 0,
+            mainAxisAligment: MainAxisAligment.center,
             separatorBuilder: {activeColor, android} => AppSpace.vSmallest,
 
             // padding: EdgeInsets.only(left: 15.w, top: 10.h),
@@ -112,12 +114,19 @@ class BudgetPageHeader extends ConsumeWidget{
                     isAnimate ? Bounce(
                         infinite: true,
                         child: Center(
+                            onTap: ()=> FocusScope.of(context).unfocus(),
                             child: Container(
+                                key: _formKey,
+                                padding:
+                                    const EdgeInsets.all(Dimens.HORIZONTAL_PADDING *2),
                                 width: 212.h,
                                 height: 212.h,
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle, color.red,
                                 ),
+                                LoginHeader(
+                                    text: translate('authgbg'),
+                                )
                             ),
                         ),
                     ) : Container(),
@@ -143,6 +152,20 @@ class BudgetPageHeader extends ConsumeWidget{
                     color: Colors.blue.withOpacity(0.3),
                 ),
                 transactions: transactions,
+                bottom: TabBar(
+                  controller: _tabcontroller,
+                  labelColor: Theme.of(context).primaryColor,
+                  labelStyle: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600),
+                  unselectedLabelStyle: TextStyle(fontSize:16.0),
+                  tabs:(
+                    Tab(
+                        text: "Trenf"
+                    ),
+                    Tab(
+                        text: "Trenffhf fjhrb djhfhf"
+                    ),
+                  ) , 
+                ),
             )
             Text(
                 style: style.titleMedium?.copyWith(

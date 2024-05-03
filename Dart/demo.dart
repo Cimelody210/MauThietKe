@@ -14,6 +14,15 @@ class MainApp extends StateWidget{
 Widget build(BuildContext context){
     return MaterialApp(
         body: Center(
+            new DrawerHeader(
+                margin: EdgeInsets.zero,
+                padding: EdgeInsets.zero,
+                child: UserAccountDrawerHeader(
+                    decoration: BoxDecoration(color: Colors.green),
+                    accountName: Text('sddd'),
+                    accountEmail: Text('dhfhhr'),
+                ),
+            ),
             child: Container(
                 // Tạo chiều cao cho đối tượng
                 height: 300,
