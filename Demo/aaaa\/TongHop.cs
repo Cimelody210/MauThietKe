@@ -11,6 +11,16 @@ namespace TongHop
 
         }
     }
+    //Abstract
+    public class Client{
+        
+    }
+    public abstract class AbstractFactory
+    {
+        public abstract x;
+    }
+    
+
     //test thử nghiệm
     private static final EngeSingleton instance  = new EngeSingleton();
     public class A{
