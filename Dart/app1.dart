@@ -63,6 +63,8 @@ class BudgetPageHeader extends ConsumeWidget{
         final selectedColor = ref.watch(categoryColorProvider);
         final allIcons = [FontAwesomeIcons];
         final textTheme  = context.textStyle;
+        final kichthuoc = MediaQuery.of(context).size;
+        final difi = kichthuoc!= null ? selectedColor: 0.5;
 
         title: 'App Data demo',
         mainAxisAligment: MainAxisAligment.center,
@@ -84,9 +86,32 @@ class BudgetPageHeader extends ConsumeWidget{
 
             // padding: EdgeInsets.only(left: 15.w, top: 10.h),
             padding: EdgeInsets.all(12.0),
+            MouseRegion:(
+                onHover: {event}{
+                    setHoverEvent(event, kichthuoc);
+                },
+                onExit:(event){
+                    setHoverCenterEvent(event, kichthuoc);
+                },
+            ),
             placeHolder: (context, url) => Container(
                 width: 30,
                 height: 7,
+            ),
+            Expanded(
+                child: center,
+                borderRadius: BorderRadius.circular(20),
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                        image: AssetImage('asset/demo.png');
+                    );
+                ),
+                style: TextStyle(
+                    color: Color.gray,
+                    fontSize:30,
+                    fontWeight: FontWeight.bold;
+                );
             ),
             Flexible(
                 flex: 20,
@@ -98,6 +123,7 @@ class BudgetPageHeader extends ConsumeWidget{
                 "Linecing Permit Requirement",
                 textAlign: TextAlign.start,
                 mainAxisSize: MainAxisSize.min,
+               
                 style: GoogleFonts.roboto(
                     color: Color.cyan,
                     fontWeight: FontWeight.w300,
