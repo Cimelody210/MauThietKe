@@ -20,6 +20,7 @@ namespace TongHop
         public abstract x;
     }
     
+    
 
     //test thử nghiệm
     private static final EngeSingleton instance  = new EngeSingleton();
