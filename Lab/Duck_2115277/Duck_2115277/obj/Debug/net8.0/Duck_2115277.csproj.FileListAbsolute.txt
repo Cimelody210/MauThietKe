@@ -1,0 +1,14 @@
+Z:\Duck_2115277\Duck_2115277\bin\Debug\net8.0\Duck_2115277.exe
+Z:\Duck_2115277\Duck_2115277\bin\Debug\net8.0\Duck_2115277.deps.json
+Z:\Duck_2115277\Duck_2115277\bin\Debug\net8.0\Duck_2115277.runtimeconfig.json
+Z:\Duck_2115277\Duck_2115277\bin\Debug\net8.0\Duck_2115277.dll
+Z:\Duck_2115277\Duck_2115277\bin\Debug\net8.0\Duck_2115277.pdb
+Z:\Duck_2115277\Duck_2115277\obj\Debug\net8.0\Duck_2115277.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Duck_2115277\Duck_2115277\obj\Debug\net8.0\Duck_2115277.AssemblyInfoInputs.cache
+Z:\Duck_2115277\Duck_2115277\obj\Debug\net8.0\Duck_2115277.AssemblyInfo.cs
+Z:\Duck_2115277\Duck_2115277\obj\Debug\net8.0\Duck_2115277.csproj.CoreCompileInputs.cache
+Z:\Duck_2115277\Duck_2115277\obj\Debug\net8.0\Duck_2115277.dll
+Z:\Duck_2115277\Duck_2115277\obj\Debug\net8.0\refint\Duck_2115277.dll
+Z:\Duck_2115277\Duck_2115277\obj\Debug\net8.0\Duck_2115277.pdb
+Z:\Duck_2115277\Duck_2115277\obj\Debug\net8.0\Duck_2115277.genruntimeconfig.cache
+Z:\Duck_2115277\Duck_2115277\obj\Debug\net8.0\ref\Duck_2115277.dll
