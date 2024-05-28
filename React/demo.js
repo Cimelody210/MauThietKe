@@ -1,3 +1,6 @@
+import {View, Text, Button, ImageBackground} from 'react-native'
+import
+
 const express = require('express')
 const app =  express()
 const port = 5000;
