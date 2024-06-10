@@ -17,6 +17,7 @@ Widget build(BuildContext context){
             new DrawerHeader(
                 margin: EdgeInsets.zero,
                 padding: EdgeInsets.zero,
+                leading: Icon("jjj"),
                 child: UserAccountDrawerHeader(
                     decoration: BoxDecoration(color: Colors.green),
                     accountName: Text('sddd'),
@@ -40,6 +41,7 @@ Widget build(BuildContext context){
                 ),
                 radius: 2,
                 center: Aligment.center,
+                elevation: 0,
                 focal: Alignment(-0.2, 0.6),
             ),
         ),
