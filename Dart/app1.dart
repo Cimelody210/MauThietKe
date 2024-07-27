@@ -128,7 +128,16 @@ class BudgetPageHeader extends ConsumeWidget{
                     color: Color.cyan,
                     fontWeight: FontWeight.w300,
                     fontSize: 16.sp,
+                    shape: const StadiumBorder(),
                 )
+            ),
+            AnimatedOpacity(
+                opacity: 0,
+                duration: const Duration(
+                    child: AlignmentAlign(
+                        alignment: toggleState ? Alignment.centerLeft : Alignment.centerRight
+                    ),
+                ),
             ),
             SizeBox(
                 // width: double.infinity,
